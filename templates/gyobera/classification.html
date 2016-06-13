@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}{{ classification_name }}{% endblock %}
+
+{% block body_block %}
+            <h1>{{ classification_name }}</h1>
+        {% if classification %}
+            {% if lists %}
+            <ul>
+                {% for list in lists %}
+                    <li>
+                    <a href="/Gyobera/'goto'?list_id={{list.id}}">{{ list.title }}</a>
+                    {% if list.views > 1 %}
+                        ({{ list.views }} views)
+                        {% elif list.views == 1 %}
+                        ({{ list.views }} view)
+                {% endif %}
+                    </li>
+                <li><a href="{{ list.description }}">{{ list.title }}{{ list.views }}</a></li>
+                {% endfor %}
+            </ul>
+
+            {% else %}
+                <strong>No hostels currently in category.</strong>
+            {% endif %}
+            <>< href="/Gyobera/classification/{{ classification_name_slug }}">
+        {% else %}
+            The specified category {{ category_name }} does not exist!
+        {% endif %}
+
+    <div>
+        <ul>
+    {% if user.is_authenticated %}
+        <li><a href="{% url 'restricted' %}">Restricted Page</a></li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+        <li><a href="{% url 'add_classification' %}">Add a New Classification</a></li>
+        	<a href="{% url '/classification/add_list/' classification_name_url %}">Add a Hostel!</a>
+    {% else %}
+        <li><a href="{% url 'register' %}">Register Here</a></li>
+        <li><a href="{% url 'login' %}">Login</a></li>
+    {% endif %}
+
+    <li><a href="{% url 'about' %}">About</a></li>
+    </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Gyobera!! - {% block title %}Ucu Hostel Management{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css"/>
+    </head>
+
+    <body>
+        <div>
+          <nav> <h3>
+    {% if user.is_authenticated %}
+        <a href="{% url 'about' %}">About</a> |
+        <a href="{% url 'gallery' %}">Hostel Details</a> |
+        <a href="{% url 'book' %}">Book_Now</a> |
+        <a href="{% url 'payment' %}">Payment_deposit</a> |
+        <a href="{% url 'booking' %}">View_Bookings</a> |
+        <a href="{% url 'rooms' %}">Available_Rooms</a> |
+        <a href="{% url 'contact' %}">Contact_us</a> |
+        <a href="{% url 'registry' %}">Students_Registry</a> |
+        <a href="{% url 'student' %}">Register Here</a> |
+        <a href="{% url 'add_classification' %}">Add a New Classification</a> |
+        <a href="{% url 'logout' %}">Logout</a> |
+    {% else %}
+        <a href="{% url 'register' %}">Register Here</a> |
+        <a href="{% url 'login' %}">Login</a> |
+    {% endif %}
+    </h3>
+    </nav>
+            {% block body_block %}{% endblock %}
+        </div>
+
+        <hr />
+
+
+    </body>
+</html>

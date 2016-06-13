@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}{{ classification_name }}{% endblock %}
+
+{% block body_block %}
+    <h1>Contact us</h1><a href="/Gyobera/">Home</a>
+
+    <form role="form" action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+
+{% endblock %}

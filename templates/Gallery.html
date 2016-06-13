@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}{{ category_name }}{% endblock %}
+
+{% block body_block %}
+    <h1>Ucu Hostel Management</h1><br/><a href="/Gyobera/">Home</a><br/><br/><a href="/book/">Book_Now</a><br/><br/>
+        <strong>View hostel images, prices of both double and single, number of rooms available here.</strong><br/>
+     <h3>Victory Hostel (self contained)</h3>
+        <h3>price_single: 700,000</h3>
+        <h3>price_double: 550,000</h3>
+        <h3>total_rooms: 50</h3>
+     <div class="container"><img src="{% static "images/pam.jpg" %}" alt="Luxury and Affordable Hostels" /><div/>
+    <br/><br/>
+     <h3>Charlton Hostel (self contained)</h3>
+        <h3>price_single: 700,000</h3>
+        <h3>price_double: 500,000</h3>
+        <h3>total_rooms: 35</h3>
+     <div class="container"><img src="{% static "images/car.jpg" %}" alt="Luxury and Affordable Hostels" /><div/>
+    <br/><br/>
+     <h3>Rayan Hostel</h3>
+        <h3>price_single: 600,000</h3>
+        <h3>price_double: 400,000</h3>
+        <h3>total_rooms: 14</h3>
+     <div class="container"><img src="{% static "images/ray.jpg" %}" alt="Luxury and Affordable Hostels" /><div/>
+    <br/><br/>
+     <h3>Sabiiti Hall</h3>
+        <h3>price_1: 1,600,000 </h3>
+        <h3>price_4: 400,000 </h3>
+        <h3>total_rooms: 200</h3>
+     <div class="container"><img src="{% static "images/sab.jpg" %}" alt="Luxury and Affordable Hostels" /><div/>
+    <br/><br/>
+     <h3>Nsibambi Hall</h3>
+        <h3>price_1: 1,600,000</h3>
+        <h3>price_4: 400,000</h3>
+        <h3>total_rooms: 200</h3>
+     <div class="container"><img src="{% static "images/nsi.jpg" %}" alt="Luxury and Affordable Hostels" /><div/>
+    <br/><br/>
+     <h3>Viena Hostel (self contained)</h3>
+        <h3>price_single: 700,000</h3>
+        <h3>price_double: 500,000</h3>
+        <h3>total_rooms: 55</h3>
+     <div class="container"><img src="{% static "images/vie.jpg" %}" alt="Luxury and Affordable Hostels" /><div/>
+    <br/><br/>
+     <h3>Bethany Hostel (self contained)</h3>
+        <h3>price_single: 700,000</h3>
+        <h3>price_double: 500,000</h3>
+        <h3>total_rooms: 36</h3>
+     <div class="container"><img src="{% static "images/bet.jpg" %}" alt="Luxury and Affordable Hostels" /><div/>
+    <br/><br/>
+     <h3>Limz Hostel</h3>
+        <h3>price_single: 600,000</h3>
+        <h3>price_double: 450,000</h3>
+        <h3>total_rooms: 20</h3>
+     <div class="container"><img src="{% static "images/limz.jpg" %}" alt="Luxury and Affordable Hostels" /><div/>
+    <br/><br/>
+     <h3>Pameja Hostel (self contained)</h3>
+        <h3>price_single: 900,000 </h3>
+        <h3>price_double: 600,000</h3>
+        <h3>total_rooms: 50</h3>
+     <div class="container"><img src="{% static "images/pam.jpg" %}" alt="Luxury and Affordable Hostels" /><div/>
+    <br/><br/>
+     <h3>Runa Hostel (self contained)</h3>
+        <h3>price_single: 600,000 </h3>
+        <h3>price_double: 400,000 </h3>
+        <h3>total_rooms: 52</h3>
+     <div class="container"><img src="{% static "images/run.jpg" %}" alt="Luxury and Affordable Hostels" /><div/>
+    <br/><br/>
+     <h3>Honours College</h3>
+        <h3>price_single: 0</h3>
+        <h3>price_double: 0 </h3>
+        <h3>total_rooms: 40 </h3>
+     <div class="container"><img src="{% static "images/zz.jpg" %}" alt="Luxury and Affordable Hostels" /><div/>
+    <br/><br/>
+{% endblock %}

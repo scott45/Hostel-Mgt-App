@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}{{ category_name }}{% endblock %}
+
+{% block body_block %}
+    {% if user.is_authenticated %}
+    <h1>Ucu Hostel Management <br/> <br/>Hello {{ user.username }}!</h1>
+    {% else %}
+    <h1>Gyobera!! Ucu Hostel Management</h1>
+    {% endif %}
+    <h2><strong>Main Classifications</strong></h2>
+          {% if classifications %}
+            <ul>
+                {% for classification in classifications %}
+                 <!-- Following line changed to add an HTML hyperlink -->
+                <li><a href="{{ classification.slug }}">{{ classification.name }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <strong>There are no classifications present.</strong>
+        {% endif %}
+     <h2><strong>Most viewed Hostels</strong></h2>
+          {% if lists %}
+            <ul>
+                {% for list in lists %}
+                 <!-- Following line changed to add an HTML hyperlink -->
+                <li><a href="{{ classification.name }}">{{ list.title }} ({{ list.views }} Views)</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <strong>Views</strong>: Ucu-Affiliated females(140), Private Mixed(112), Ucu-Affiliated females(111)<br/>
+              <strong>Likes</strong>: Private Mixed(90), Ucu-Affiliated females(84), Ucu-Affiliated females(78)
+        {% endif %}
+{% endblock %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ucu Hostel Management</title>
+    </head>
+
+    <body>
+        <h1>Add a Hostel</h1><a href="/Gyobera/">Home</a>
+
+        <form id="classification_form" method="post" action="/Gyobera/add_classification/">
+
+            {% csrf_token %}
+            {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+            {% endfor %}
+
+            {% for field in form.visible_fields %}
+                {{ field.errors }}
+                {{ field.help_text }}
+                {{ field }}
+            {% endfor %}
+
+            <input type="submit" name="submit" value="Add to List" />
+        </form>
+    </body>
+
+</html>

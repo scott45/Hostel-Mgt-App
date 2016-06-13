@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}{{ category_name }}{% endblock %}
+
+{% block body_block %}
+    <h1><strong>Bookings already made </strong></h1><a href="/Gyobera/">Home</a><br/><br/>
+          {% if bookings %}
+            <ul>
+                {% for booking in bookings %}
+                 <!-- Following line changed to add an HTML hyperlink -->
+                <li><a href="{{ booking_list}}">{{ booking }}</a></li><br/>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <strong>There are no bookings made.</strong>
+        {% endif %}
+{% endblock %}

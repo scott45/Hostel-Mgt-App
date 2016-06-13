@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}{{ category_name }}{% endblock %}
+
+{% block body_block %}
+    <h1><strong>Available rooms </strong></h1><a href="/Gyobera/">Home</a><br/>
+          {% if rooms %}
+            <ul>
+                {% for room in rooms %}
+                 <!-- Following line changed to add an HTML hyperlink -->
+                <li><a href="{{ room_list}}">{{ room }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <strong>There are no rooms in this hostel.</strong>
+        {% endif %}
+{% endblock %}
