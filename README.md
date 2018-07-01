@@ -1,5 +1,4 @@
-
-> Intro
+Introduction
 
 This is an online hostel management system that i did as my final year project to attain a bachelor's degree.
 As a adjango newbie, i streched beyond limits to do my final year project using the framework.
